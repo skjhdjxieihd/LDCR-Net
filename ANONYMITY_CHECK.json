@@ -1,0 +1,21 @@
+{
+  "content_level_checks_passed": true,
+  "files_checked": 40,
+  "manuscript_author_identity_matches": 0,
+  "email_matches": 0,
+  "personal_path_matches": 0,
+  "internal_submission_history_matches": 0,
+  "credential_pattern_matches": 0,
+  "git_history_included": false,
+  "datasets_or_weights_included": false,
+  "required_third_party_attribution_preserved": true,
+  "scientific_python_computation_unchanged": true,
+  "archive_metadata": "Uniform generic file permissions and fixed timestamps; no comments or extra fields.",
+  "scope": "UTF-8 file contents, filenames, local component map and distributed ZIP metadata.",
+  "outside_scope": [
+    "Future hosting account identity",
+    "Future commit author/email/history",
+    "Future anonymous-mirror configuration",
+    "Previously published copies or external links to this implementation"
+  ]
+}

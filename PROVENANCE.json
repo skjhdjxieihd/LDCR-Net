@@ -1,0 +1,142 @@
+{
+  "scope": "Anonymous source-only review snapshot",
+  "components": [
+    {
+      "file": ".gitignore",
+      "role": "Exclude locally generated assets"
+    },
+    {
+      "file": "README.md",
+      "role": "Complete English installation and running instructions"
+    },
+    {
+      "file": "config/experiment.json",
+      "role": "Synthetic generation and fresh-training recipe"
+    },
+    {
+      "file": "requirements.txt",
+      "role": "Pinned dependencies"
+    },
+    {
+      "file": "run.py",
+      "role": "Staged and complete source-only workflow CLI"
+    },
+    {
+      "file": "src/CPC.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/LDCR_Net.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/ablation_core.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/baseline_common.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/behavior_sequence_metrics.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/bilstm.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/boundary_core.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/calibration.py",
+      "role": "Generated-calibration detector selection and prototype fitting"
+    },
+    {
+      "file": "src/cpc_inference.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/dataset_generator.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/detector_contract.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/generate_discrete_signal.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/lstm_fcn.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/paired_corruptions.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/pdw_normalization.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/plot_ablation.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/plot_boundary.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/plot_sequence.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/plotting.py",
+      "role": "New-run measured-result and training-loss exports"
+    },
+    {
+      "file": "src/reproduction.py",
+      "role": "Evaluation using only generated run-local assets"
+    },
+    {
+      "file": "src/revision_utils.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/sequence_core.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/sequence_metrics.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/train_infer_ldcr_net.py",
+      "role": "Scientific implementation module"
+    },
+    {
+      "file": "src/training.py",
+      "role": "Fresh LDCR, CPC and supervised training entry points"
+    },
+    {
+      "file": "src/workflow.py",
+      "role": "Local corpus generation, stage orchestration and integrity checks"
+    },
+    {
+      "file": "tests/test_workflow.py",
+      "role": "Acceptance and completed-run state-integrity regression tests"
+    }
+  ],
+  "external_components": [
+    {
+      "file": "src/CPC.py",
+      "upstream_url": "https://github.com/felixkreuk/UnsupSeg",
+      "license": "MIT",
+      "notice": "LICENSES/UnsupSeg-MIT.txt"
+    }
+  ],
+  "note": "Local development paths, manuscript-title metadata, historical source fingerprints and submission records are omitted. Current-file checksums are supplied separately."
+}

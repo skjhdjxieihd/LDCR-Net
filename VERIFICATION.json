@@ -1,0 +1,92 @@
+{
+  "release_scope": "Anonymous source-only review snapshot; execution validation scopes below describe the locally tested workflow.",
+  "passed": true,
+  "scientific_source_definitions_verified": 86,
+  "original_datasets_distributed": false,
+  "pretrained_assets_distributed": false,
+  "original_prediction_records_distributed": false,
+  "end_to_end_smoke": {
+    "training_sequences": 16,
+    "calibration_sequences": 8,
+    "passed": true,
+    "profile": "smoke",
+    "checks": [
+      "Three local corpora have distinct seeds, consistent counts and unchanged file hashes.",
+      "All nine checkpoints trace to this generated training corpus and finite training histories.",
+      "Detection settings and three prototype sets were fitted from calibration only.",
+      "Calibration and evaluation fingerprints match the current models and data.",
+      "Complete boundary, ablation, sequence, bootstrap and reference results have expected sizes and finite metrics.",
+      "Boundary summaries agree with the underlying per-sequence match counts.",
+      "Six empirical figures plus the fresh-training loss figure were exported as PDF."
+    ],
+    "models_trained": 9,
+    "test_sequences": 3,
+    "boundary_predictions": 300,
+    "sequence_records": 126,
+    "bootstrap_replicates": 10,
+    "note": "Checks establish a runnable new experiment; matching paper numerical results is not required.",
+    "environment": {
+      "python": "3.10.20",
+      "torch": "2.5.1+cu121",
+      "numpy": "2.2.6"
+    }
+  },
+  "standalone_manual_commands": {
+    "training_sequences": 8,
+    "calibration_sequences": 7,
+    "source_copy_outside_original_code_directory": true,
+    "stages": [
+      "generate",
+      "train",
+      "calibrate",
+      "evaluate",
+      "plot",
+      "check"
+    ],
+    "passed": true,
+    "profile": "smoke",
+    "checks": [
+      "Three local corpora have distinct seeds, consistent counts and unchanged file hashes.",
+      "All nine checkpoints trace to this generated training corpus and finite training histories.",
+      "Detection settings and three prototype sets were fitted from calibration only.",
+      "Calibration and evaluation fingerprints match the current models and data.",
+      "Complete boundary, ablation, sequence, bootstrap and reference results have expected sizes and finite metrics.",
+      "Boundary summaries agree with the underlying per-sequence match counts.",
+      "Six empirical figures plus the fresh-training loss figure were exported as PDF."
+    ],
+    "models_trained": 9,
+    "test_sequences": 1,
+    "boundary_predictions": 100,
+    "sequence_records": 42,
+    "bootstrap_replicates": 10,
+    "note": "Checks establish a runnable new experiment; matching paper numerical results is not required.",
+    "environment": {
+      "python": "3.10.20",
+      "torch": "2.5.1+cu121",
+      "numpy": "2.2.6"
+    }
+  },
+  "regression_tests": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "red_to_green_verified": [
+      "Source-only contents, mandatory generated checkpoints and new CLI/config",
+      "Reject stale calibration encoder and evaluation checkpoint fingerprints",
+      "Reject modified figures even when they retain a PDF header",
+      "Boundary conditions derive from the active saved run configuration"
+    ]
+  },
+  "visual_check": "Generated nine-panel training-loss PDF rendered and inspected without clipped labels or missing panels.",
+  "full_training_to_convergence_tested": false,
+  "cuda_tested": false,
+  "verification_artifacts": "No generated datasets, checkpoints, result records, figures, logs or caches are included.",
+  "distribution_checks": {
+    "discovered_tests": 13,
+    "passed": 10,
+    "skipped": 3,
+    "skip_reason": "The three completed-run mutation tests require generated datasets/checkpoints, which are not distributed.",
+    "python_computation_unchanged": true,
+    "anonymous_review_snapshot": true
+  }
+}

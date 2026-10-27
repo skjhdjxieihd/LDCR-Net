@@ -1,0 +1,259 @@
+{
+  "description": "Source-only synthetic experiment. All data, checkpoints, calibration assets and results are generated locally.",
+  "generation": {
+    "seeds": {
+      "training": 61731,
+      "calibration": 61732,
+      "test": 61733
+    },
+    "state_changes": [
+      4,
+      10
+    ],
+    "events_per_segment": [
+      80,
+      180
+    ]
+  },
+  "seed": 42,
+  "main_loss_levels": [
+    0,
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "extended_loss_levels": [
+    0,
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6
+  ],
+  "receiver_error_levels": [
+    0,
+    0.5,
+    1,
+    1.5,
+    2
+  ],
+  "models": {
+    "full": {
+      "model_config": {
+        "input_features": 4,
+        "hidden_dim": 128,
+        "z_dim": 64,
+        "tv_dim": 32,
+        "dropout": 0.0,
+        "median_kernel": 5,
+        "median_stride": 2,
+        "use_median_downsample": true,
+        "use_multiscale_local": true,
+        "use_tv_branch": true,
+        "use_reconstruction_head": true
+      },
+      "loss_config": {
+        "invariance_weight": 25.0,
+        "variance_weight": 25.0,
+        "covariance_weight": 1.0,
+        "ti_weight": 5.0,
+        "stable_consistency_weight": 0.5,
+        "stable_consistency_steps": 2,
+        "reconstruction_weight": 0.2,
+        "separation_weight": 1.0,
+        "input_sigma_scale": 1.0,
+        "variance_target": 1.0,
+        "max_consistency_points": 1024,
+        "noise_std": 0.01,
+        "feature_drop_prob": 0.05
+      }
+    },
+    "no_median": {
+      "model_config": {
+        "input_features": 4,
+        "hidden_dim": 128,
+        "z_dim": 64,
+        "tv_dim": 32,
+        "dropout": 0.0,
+        "median_kernel": 5,
+        "median_stride": 2,
+        "use_median_downsample": false,
+        "use_multiscale_local": true,
+        "use_tv_branch": true,
+        "use_reconstruction_head": true
+      },
+      "loss_config": {
+        "invariance_weight": 25.0,
+        "variance_weight": 25.0,
+        "covariance_weight": 1.0,
+        "ti_weight": 5.0,
+        "stable_consistency_weight": 0.5,
+        "stable_consistency_steps": 2,
+        "reconstruction_weight": 0.2,
+        "separation_weight": 1.0,
+        "input_sigma_scale": 1.0,
+        "variance_target": 1.0,
+        "max_consistency_points": 1024,
+        "noise_std": 0.01,
+        "feature_drop_prob": 0.05
+      }
+    },
+    "no_multiscale": {
+      "model_config": {
+        "input_features": 4,
+        "hidden_dim": 128,
+        "z_dim": 64,
+        "tv_dim": 32,
+        "dropout": 0.0,
+        "median_kernel": 5,
+        "median_stride": 2,
+        "use_median_downsample": true,
+        "use_multiscale_local": false,
+        "use_tv_branch": true,
+        "use_reconstruction_head": true
+      },
+      "loss_config": {
+        "invariance_weight": 25.0,
+        "variance_weight": 25.0,
+        "covariance_weight": 1.0,
+        "ti_weight": 5.0,
+        "stable_consistency_weight": 0.5,
+        "stable_consistency_steps": 2,
+        "reconstruction_weight": 0.2,
+        "separation_weight": 1.0,
+        "input_sigma_scale": 1.0,
+        "variance_target": 1.0,
+        "max_consistency_points": 1024,
+        "noise_std": 0.01,
+        "feature_drop_prob": 0.05
+      }
+    },
+    "no_reconstruction": {
+      "model_config": {
+        "input_features": 4,
+        "hidden_dim": 128,
+        "z_dim": 64,
+        "tv_dim": 32,
+        "dropout": 0.0,
+        "median_kernel": 5,
+        "median_stride": 2,
+        "use_median_downsample": true,
+        "use_multiscale_local": true,
+        "use_tv_branch": true,
+        "use_reconstruction_head": false
+      },
+      "loss_config": {
+        "invariance_weight": 25.0,
+        "variance_weight": 25.0,
+        "covariance_weight": 1.0,
+        "ti_weight": 5.0,
+        "stable_consistency_weight": 0.5,
+        "stable_consistency_steps": 2,
+        "reconstruction_weight": 0.0,
+        "separation_weight": 1.0,
+        "input_sigma_scale": 1.0,
+        "variance_target": 1.0,
+        "max_consistency_points": 1024,
+        "noise_std": 0.01,
+        "feature_drop_prob": 0.05
+      }
+    },
+    "no_tv": {
+      "model_config": {
+        "input_features": 4,
+        "hidden_dim": 128,
+        "z_dim": 64,
+        "tv_dim": 32,
+        "dropout": 0.0,
+        "median_kernel": 5,
+        "median_stride": 2,
+        "use_median_downsample": true,
+        "use_multiscale_local": true,
+        "use_tv_branch": false,
+        "use_reconstruction_head": true
+      },
+      "loss_config": {
+        "invariance_weight": 25.0,
+        "variance_weight": 25.0,
+        "covariance_weight": 1.0,
+        "ti_weight": 5.0,
+        "stable_consistency_weight": 0.5,
+        "stable_consistency_steps": 2,
+        "reconstruction_weight": 0.2,
+        "separation_weight": 0.0,
+        "input_sigma_scale": 1.0,
+        "variance_target": 1.0,
+        "max_consistency_points": 1024,
+        "noise_std": 0.01,
+        "feature_drop_prob": 0.05
+      }
+    },
+    "no_invariance": {
+      "model_config": {
+        "input_features": 4,
+        "hidden_dim": 128,
+        "z_dim": 64,
+        "tv_dim": 32,
+        "dropout": 0.0,
+        "median_kernel": 5,
+        "median_stride": 2,
+        "use_median_downsample": true,
+        "use_multiscale_local": true,
+        "use_tv_branch": true,
+        "use_reconstruction_head": true
+      },
+      "loss_config": {
+        "invariance_weight": 0.0,
+        "variance_weight": 25.0,
+        "covariance_weight": 1.0,
+        "ti_weight": 5.0,
+        "stable_consistency_weight": 0.5,
+        "stable_consistency_steps": 2,
+        "reconstruction_weight": 0.2,
+        "separation_weight": 1.0,
+        "input_sigma_scale": 1.0,
+        "variance_target": 1.0,
+        "max_consistency_points": 1024,
+        "noise_std": 0.01,
+        "feature_drop_prob": 0.05
+      }
+    }
+  },
+  "training": {
+    "ldcr_learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "cpc_learning_rate": 0.001,
+    "cpc_crop_length": 256,
+    "cpc_crop_stride": 128,
+    "supervised_training_limit": 1000
+  },
+  "profiles": {
+    "smoke": {
+      "training_size": 16,
+      "calibration_size": 8,
+      "test_size": 3,
+      "ldcr_epochs": 1,
+      "invariance_epochs": 1,
+      "cpc_epochs": 1,
+      "supervised_epochs": 1,
+      "batch_size": 4,
+      "bootstrap_replicates": 10
+    },
+    "full": {
+      "training_size": 4000,
+      "calibration_size": 300,
+      "test_size": 300,
+      "ldcr_epochs": 30,
+      "invariance_epochs": 12,
+      "cpc_epochs": 30,
+      "supervised_epochs": 20,
+      "batch_size": 32,
+      "bootstrap_replicates": 1000
+    }
+  }
+}
